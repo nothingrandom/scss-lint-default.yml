@@ -13,10 +13,10 @@ linters:
     convention: zero # or `none`
 
   ColorKeyword:
-    enabled: true
+    enabled: false
 
   ColorVariable:
-    enabled: true
+    enabled: false
 
   Comment:
     enabled: true
@@ -88,7 +88,7 @@ linters:
 
   NestingDepth:
     enabled: true
-    max_depth: 3
+    max_depth: 5
 
   PlaceholderInExtend:
     enabled: true
