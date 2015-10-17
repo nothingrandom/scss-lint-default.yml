@@ -1,12 +1,21 @@
 # Default application configuration that all configurations inherit from.
 
 scss_files: "**/*.scss"
+plugin_directories: ['.scss-linters']
+
+# List of gem names to load custom linters from (make sure they are already
+# installed)
+plugin_gems: []
 
 linters:
   BangFormat:
     enabled: true
     space_before_bang: true
     space_after_bang: false
+
+  BemDepth:
+    enabled: false
+    max_elements: 1
 
   BorderZero:
     enabled: true
@@ -27,6 +36,9 @@ linters:
   DeclarationOrder:
     enabled: true
 
+  DisableLinterReason:
+    enabled: false
+
   DuplicateProperty:
     enabled: true
 
@@ -40,6 +52,9 @@ linters:
 
   EmptyRule:
     enabled: true
+
+  ExtendDirective:
+    enabled: false
 
   FinalNewline:
     enabled: true
@@ -89,6 +104,7 @@ linters:
   NestingDepth:
     enabled: true
     max_depth: 5
+    ignore_parent_selectors: false
 
   PlaceholderInExtend:
     enabled: true
@@ -97,6 +113,17 @@ linters:
     enabled: false
     include_nested: false
     max_properties: 10
+
+  PropertySortOrder:
+    enabled: true
+    order: ["position", "top", "right", "bottom", "left", "z-index", "display", "visibility", "overflow", "overflow-x", "overflow-y", "float", "clear", "table-layout", "border-collapse", "empty-cells", "box-sizing", "width", "min-width", "max-width", "height", "min-height", "max-height", "margin", "margin-top", "margin-right", "margin-bottom", "margin-left", "padding", "padding-top", "padding-right", "padding-bottom", "padding-left", "border", "border-width", "border-style", "border-color", "border-radius", "border-top", "border-top-width", "border-top-style", "border-top-color", "border-right", "border-right-width", "border-right-style", "border-right-color", "border-bottom", "border-bottom-width", "border-bottom-style", "border-bottom-color", "border-left", "border-left-width", "border-left-style", "border-left-color", "border-top-left-radius", "border-top-right-radius", "border-bottom-right-radius", "border-bottom-left-radius", "white-space", "content", "background", "background-color", "background-image", "background-repeat", "background-attachment", "background-position", "background-size", "opacity", "color", "font", "font-family", "font-size", "font-weight", "font-style", "font-variant", "letter-spacing", "line-height", "list-style", "list-style-type", "list-style-position", "list-style-image", "outline", "outline-width", "outline-style", "outline-color", "text-align", "text-decoration", "text-indent", "text-transform", "text-shadow", "animation", "transform", "transition", "box-shadow", "cursor"]
+    ignore_unspecified: false
+    min_properties: 2
+    separate_groups: false
+
+  PropertySpelling:
+    enabled: true
+    extra_properties: []
 
   PropertyUnits:
     enabled: true
@@ -108,19 +135,8 @@ linters:
       'ms', 's',                               # Duration
       'Hz', 'kHz',                             # Frequency
       'dpi', 'dpcm', 'dppx',                   # Resolution
-      '%',                                     # Other
-    ]
+      '%']                                     # Other
     properties: {}
-
-  PropertySortOrder:
-    enabled: true
-    order: ["position", "top", "right", "bottom", "left", "z-index", "display", "visibility", "overflow", "overflow-x", "overflow-y", "float", "clear", "table-layout", "border-collapse", "empty-cells", "box-sizing", "width", "min-width", "max-width", "height", "min-height", "max-height", "margin", "margin-top", "margin-right", "margin-bottom", "margin-left", "padding", "padding-top", "padding-right", "padding-bottom", "padding-left", "border", "border-width", "border-style", "border-color", "border-radius", "border-top", "border-top-width", "border-top-style", "border-top-color", "border-right", "border-right-width", "border-right-style", "border-right-color", "border-bottom", "border-bottom-width", "border-bottom-style", "border-bottom-color", "border-left", "border-left-width", "border-left-style", "border-left-color", "border-top-left-radius", "border-top-right-radius", "border-bottom-right-radius", "border-bottom-left-radius", "white-space", "content", "background", "background-color", "background-image", "background-repeat", "background-attachment", "background-position", "background-size", "opacity", "color", "font", "font-family", "font-size", "font-weight", "font-style", "font-variant", "letter-spacing", "line-height", "list-style", "list-style-type", "list-style-position", "list-style-image", "outline", "outline-width", "outline-style", "outline-color", "text-align", "text-decoration", "text-indent", "text-transform", "text-shadow", "animation", "transform", "transition", "box-shadow", "cursor"]
-    ignore_unspecified: false
-    separate_groups: false
-
-  PropertySpelling:
-    enabled: true
-    extra_properties: []
 
   QualifyingElement:
     enabled: true
@@ -134,7 +150,7 @@ linters:
 
   SelectorFormat:
     enabled: true
-    convention: hyphenated_lowercase # or 'strict_BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
+    convention: hyphenated_BEM # or 'strict_BEM', or 'hyphenated_BEM', or 'hyphenated_lowercase', or 'snake_case', or 'camel_case', or a regex pattern
 
   Shorthand:
     enabled: true
@@ -149,6 +165,7 @@ linters:
 
   SpaceAfterComma:
     enabled: true
+    style: one_space # or 'no_space', or 'at_least_one_space'
 
   SpaceAfterPropertyColon:
     enabled: true
@@ -156,6 +173,13 @@ linters:
 
   SpaceAfterPropertyName:
     enabled: true
+
+  SpaceAfterVariableName:
+    enabled: true
+
+  SpaceAroundOperator:
+    enabled: true
+    style: one_space # or 'no_space'
 
   SpaceBeforeBrace:
     enabled: true
@@ -168,12 +192,18 @@ linters:
 
   StringQuotes:
     enabled: true
-    style: double_quotes # or single_quotes
+    style: single_quotes # or double_quotes
 
   TrailingSemicolon:
     enabled: true
 
+  TrailingWhitespace:
+    enabled: true
+
   TrailingZero:
+    enabled: false
+
+  TransitionAll:
     enabled: false
 
   UnnecessaryMantissa:
