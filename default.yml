@@ -90,10 +90,10 @@ linters:
     filename_extension: false
 
   Indentation:
-    enabled: false
+    enabled: true
     allow_non_nested_indentation: false
-    character: tab # or 'space'
-    width: 1
+    character: space # or 'tab'
+    width: 2
 
   LeadingZero:
     enabled: true
@@ -127,7 +127,7 @@ linters:
 
   PropertySortOrder:
     enabled: true
-    order: ["position", "top", "right", "bottom", "left", "z-index", "display", "visibility", "overflow", "overflow-x", "overflow-y", "float", "clear", "table-layout", "border-collapse", "empty-cells", "box-sizing", "width", "min-width", "max-width", "height", "min-height", "max-height", "margin", "margin-top", "margin-right", "margin-bottom", "margin-left", "padding", "padding-top", "padding-right", "padding-bottom", "padding-left", "border", "border-width", "border-style", "border-color", "border-radius", "border-top", "border-top-width", "border-top-style", "border-top-color", "border-right", "border-right-width", "border-right-style", "border-right-color", "border-bottom", "border-bottom-width", "border-bottom-style", "border-bottom-color", "border-left", "border-left-width", "border-left-style", "border-left-color", "border-top-left-radius", "border-top-right-radius", "border-bottom-right-radius", "border-bottom-left-radius", "white-space", "content", "background", "background-color", "background-image", "background-repeat", "background-attachment", "background-position", "background-size", "opacity", "color", "font", "font-family", "font-size", "font-weight", "font-style", "font-variant", "letter-spacing", "line-height", "list-style", "list-style-type", "list-style-position", "list-style-image", "outline", "outline-width", "outline-style", "outline-color", "text-align", "text-decoration", "text-indent", "text-transform", "text-shadow", "animation", "transform", "transition", "box-shadow", "cursor"]
+    order: ["position", "top", "right", "bottom", "left", "z-index", "display", "visibility", "overflow", "overflow-x", "overflow-y", "float", "clear", "table-layout", "border-collapse", "empty-cells", "box-sizing", "width", "min-width", "max-width", "height", "min-height", "max-height", "margin", "margin-top", "margin-right", "margin-bottom", "margin-left", "padding", "padding-top", "padding-right", "padding-bottom", "padding-left", "border", "border-width", "border-style", "border-color", "border-radius", "border-top", "border-top-width", "border-top-style", "border-top-color", "border-right", "border-right-width", "border-right-style", "border-right-color", "border-bottom", "border-bottom-width", "border-bottom-style", "border-bottom-color", "border-left", "border-left-width", "border-left-style", "border-left-color", "border-top-left-radius", "border-top-right-radius", "border-bottom-right-radius", "border-bottom-left-radius", "outline", "outline-width", "outline-style", "outline-color", "white-space", "content", "background", "background-color", "background-image", "background-repeat", "background-attachment", "background-position", "background-size", "opacity", "color", "font", "font-family", "font-size", "font-weight", "font-style", "font-variant", "letter-spacing", "line-height", "list-style", "list-style-type", "list-style-position", "list-style-image", "text-align", "text-decoration", "text-indent", "text-transform", "text-shadow", "animation", "transform", "transition", "box-shadow", "cursor"]
     ignore_unspecified: false
     min_properties: 2
     separate_groups: false
@@ -151,7 +151,7 @@ linters:
     properties: {}
 
   PsudeoElement:
-    enabled: true
+    enabled: false
 
   QualifyingElement:
     enabled: true
@@ -242,9 +242,9 @@ linters:
   UrlQuotes:
     enabled: true
 
-  VariableForProperty:
-    enabled: false
-    properties: []
+  VariableforProperty:
+    enabled: true
+    properties: ['font', 'font-family']
 
   VendorPrefix:
     enabled: true
