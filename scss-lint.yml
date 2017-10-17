@@ -148,7 +148,8 @@ linters:
       'Hz', 'kHz',                             # Frequency
       'dpi', 'dpcm', 'dppx',                   # Resolution
       '%']                                     # Other
-    properties: {}
+    properties:
+      z-index: []
 
   PsudeoElement:
     enabled: false
@@ -169,7 +170,7 @@ linters:
 
   Shorthand:
     enabled: true
-    allowed_shorthands: [1, 2, 3]
+    allowed_shorthands: [1, 2, 3, 4]
 
   SingleLinePerProperty:
     enabled: true
