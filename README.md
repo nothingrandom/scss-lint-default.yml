@@ -1,6 +1,7 @@
 scss-lint-default.yml
 =====================
 
-My default.yml file for scss-lint-0.42.2
+## What?
+This is the scss-lint config file I use across my projects currently. It's strict, but helps keep me (and teams) writing consistent code.
 
-https://github.com/causes/scss-lint
+https://github.com/brigade/scss-lint
