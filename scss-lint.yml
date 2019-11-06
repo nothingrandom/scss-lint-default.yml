@@ -131,7 +131,7 @@ linters:
       # positioning
       "position", "top", "right", "bottom", "left", "z-index",
       # visual formatting
-      "display", "visibility", "overflow", "overflow-x", "overflow-y", "clip", "float", "clear", "resize", "box-sizing", "cursor"
+      "display", "visibility", "overflow", "overflow-x", "overflow-y", "clip", "float", "clear", "resize", "box-sizing", "cursor",
       # dimensions
       "width", "min-width", "max-width", "height", "min-height", "max-height",
       # flex
@@ -147,13 +147,13 @@ linters:
       # border
       "border", "border-width", "border-style", "border-color", "border-radius", "border-image", "border-image-outset", "border-image-repeat", "border-image-slice", "border-image-source", "border-image-width", "border-top", "border-top-width", "border-top-style", "border-top-color", "border-right", "border-right-width", "border-right-style", "border-right-color", "border-bottom", "border-bottom-width", "border-bottom-style", "border-bottom-color", "border-left", "border-left-width", "border-left-style", "border-left-color", "border-top-left-radius", "border-top-right-radius", "border-bottom-right-radius", "border-bottom-left-radius",
       # outline
-      "outline", "outline-width", "outline-offset" "outline-style", "outline-color",
+      "outline", "outline-width", "outline-offset", "outline-style", "outline-color",
       # content
       "content", "quotes", "counter-reset", "counter-increment",
       # list
       "list-style", "list-style-image", "list-style-position", "list-style-type",
       # background
-      "background", "background-attachment", "background-clip", "background-color", "background-image", "background-origin", "background-position", "background-repeat", "background-size", "box-shadow"
+      "background", "background-attachment", "background-clip", "background-color", "background-image", "background-origin", "background-position", "background-repeat", "background-size", "box-shadow",
       # color
       "color", "opacity",
       # font
